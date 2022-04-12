@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import ar.edu.unju.edm.model.Student;
-import ar.edu.unju.edm.model.calculator;
+import ar.edu.unju.edm.model.Calculator;
 
 @SpringBootApplication
 public class Tp00JosueVirreyraApplication {
@@ -22,9 +22,12 @@ public class Tp00JosueVirreyraApplication {
 		
 		//crear un objeto de la clase calculadora
 		
-		calculator acalculator = new calculator(); // metodo constructor
-		acalculator.setNumbera(4); // valor a
-		acalculator.setNumberb(2); // valor b
+		Calculator acalculator = new Calculator(); // metodo constructor
+		acalculator.setNumbera(125); // valor a
+		acalculator.setNumberb(3); // valor b
+		
+		System.out.println( "Valor a: " + acalculator.getNumbera());
+		System.out.println( "Valor b: " + acalculator.getNumberb());
 		//suma
 		System.out.println( "El resultado de la suma es: " + acalculator.solvesum());
 		//resta
@@ -33,7 +36,12 @@ public class Tp00JosueVirreyraApplication {
 		System.out.println( "El resultado de la division es: " + acalculator.solvediv());
 		//multiplicacion
 		System.out.println( "El resultado de la multiplicacion es: " + acalculator.solvemult());
-		
+		// potencia
+		System.out.println( "El resultado de la potencia es: " + acalculator.solvepot());
+		// raiz
+		System.out.println("El resultado de la raiz del valor a con indice del valor b es: " + acalculator.solvesqroot3());
+		System.out.println( "El resultado de la raiz cuadrada del valor a es: " + acalculator.solvesqroot());
+		System.out.println( "El resultado de la raiz cuadrada del valor b es: " + acalculator.solvesqroot2());
 	}
 
 	public static String name2() {
